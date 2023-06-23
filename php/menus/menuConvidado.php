@@ -10,7 +10,7 @@
         <li style="font-family: 'Cinzel', sans-serif;"><a href="#">Confirmar Presença</a>
             <ul style="margin-top: 8px;">
                 <li style="font-family: 'Cinzel', sans-serif;"><a href="#">Chá de Casa Nova</a></li>
-                <li style="font-family: 'Cinzel', sans-serif;"><a href="../confPresenca/confPresencaCasamento_1.php?usu=C&t=m">Casamento</a></li>
+                <li style="font-family: 'Cinzel', sans-serif;"><a href="../confPresenca/confPresInserConvite.php?usu=C&t=m">Casamento</a></li>
             </ul>
         </li>
         <li style="font-family: 'Cinzel', sans-serif;"><a href="#">Presentes</a>

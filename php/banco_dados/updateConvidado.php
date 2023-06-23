@@ -35,6 +35,6 @@
 
     }
     
-    header("Location: ../confPresenca/confPresencaCasamento_1.php?t=DS");
+    header("Location: ../confPresenca/confPresInserConvite.php?t=DS");
     
 ?>

@@ -17,7 +17,7 @@
                 Sua presença é muito importante para nós, mas caso você não possa ir, ficaremos tristes, porém vamos entender.
             </p>
                 </br></br>
-            <form method="GET" action="resultConfPresencaCasamento_7.php">
+            <form method="GET" action="resultConfPresencaCasamento.php">
                 <p class="texto">
                     Código do Convite:
                     <input type="text" id="codConvite" name="codConvite" size="20" placeholder="Código do seu convite" class="texto" style="text-align: left;"/> 

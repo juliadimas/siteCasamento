@@ -62,5 +62,5 @@
                                        FROM informacoesCasamento";
     $conInfoCasamento =   mysqli_query($conn, $consultaInformacoesCasamento);  
 
-    include_once ("selectVariavel.php");
+    include_once ("selectVariaveisCasamento.php");
 ?>

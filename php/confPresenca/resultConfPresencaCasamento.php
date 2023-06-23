@@ -9,7 +9,7 @@
     }
 
     if (trim($codConvite) <= 0){
-        header("Location: confPresencaCasamento.php?t=r");
+        header("Location: confPresInserConvite.php?t=r");
         return;
     }
 
@@ -39,7 +39,7 @@
                 O convite é único e instranferivel.
             </p>
                 </br>
-            <form border="none" method="POST" action="../banco_dados/insertConfPresencaCasamento.php">
+            <form border="none" method="POST" action="../banco_dados/updateConvidado.php">
                 <header class="titulo">
                     <tr>
                         <td>Etária | </td>

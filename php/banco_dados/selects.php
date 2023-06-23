@@ -56,4 +56,11 @@
                            FROM mensagem 
                        ORDER BY codMensagem";
     $conMensagem = mysqli_query($conn, $consultaMensagem);
+
+    $consultaInformacoesCasamento = "SELECT nomInfo,
+                                            conteudoInfo
+                                       FROM informacoesCasamento";
+    $conInfoCasamento =   mysqli_query($conn, $consultaInformacoesCasamento);  
+
+    include_once ("selectVariavel.php");
 ?>

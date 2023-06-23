@@ -1,0 +1,44 @@
+:root {
+    --cor-titulo: #3c9d3c;
+    --font-titulo: 'Cinzel', sans-serif;
+    --tamanho-titulo: 40px;
+
+    --cor-texto: #131518;
+    --font-texto: 'Robecha Daniera', sans-serif;
+    --tamanho-texto: 30px;
+}
+
+body {
+    background-color: #c8f6c8;
+}
+
+.noivos {
+    color: #3c9d3c;
+    font-family: 'Brotherhood Script', sans-serif;
+    font-size: 100px;
+}
+
+.titulo {
+    color: var(--cor-titulo);
+    font-family: var(--font-titulo);
+    font-size: var(--tamanho-titulo);
+    
+}
+
+.texto {
+    color: var(--cor-texto);
+    font-family: var(--font-texto);
+    font-size: var(--tamanho-texto);
+}
+
+.container{
+    height: 100vh;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--cor-texto);
+}

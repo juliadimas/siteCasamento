@@ -1,0 +1,32 @@
+:root {
+    --cor-titulo: #3c9d3c;
+    --font-titulo: 'Cinzel', sans-serif;
+    --tamanho-titulo: 40px;
+
+    --cor-texto: #131518;
+    --font-texto: 'Robecha Daniera', sans-serif;
+    --tamanho-texto: 30px;
+}
+
+
+.mensagem{
+    background-color: #5DFF5D;
+    font-size: var(--tamanho-texto);
+    font-family: var(--font-texto);
+    color: var(--cor-texto);
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    position: absolute;
+    margin: 10px;
+}
+
+#mensagens{
+    /*display:inline-flex;*/
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}

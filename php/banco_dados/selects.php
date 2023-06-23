@@ -1,14 +1,7 @@
 <?php
     include ("../head.php");
     include_once ("conexao.php");
-
-    if (empty($_GET['usu'])){
-        include "../menus/menuConvidado.php";
-    }elseif ($_GET['usu'] == 'N'){
-        include "../menus/menuNoivos.php";
-    }elseif ($_GET['usu'] == 'C'){
-        include "../menus/menuConvidado.php";
-    }
+    include_once ("verificaUsuario.php");
 
     $consultaTipConvidado = "SELECT codTipoConvidado,
                                     nomTipoConvidado

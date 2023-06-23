@@ -1,5 +1,5 @@
 <?php
-    include_once ("conexao.php");
+    include_once ("selects.php");
 
     $codConvite = filter_input(INPUT_POST, 'codConvite');
 

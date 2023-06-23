@@ -1,34 +1,54 @@
 <?php 
     include_once ("../banco_dados/selects.php");
 
-    $codConvite = $_GET['codConvite'];
+    $codConvite = $_POST['codConvite'];
     $tela = $_GET['tela'];
+
+    if (empty($_POST['codConvite'])){ 
+        header("Location: confPresInserConvite.php?t=SC"); //SC - Faltou inserir o código do convite
+    }else{
+        $consultaCountConvidadosConvite = "SELECT count(codConvidado) as count
+                                             FROM convidado 
+                                            WHERE fk_codConvite = '$codConvite'";
+        $conCountConvidadosConvite = mysqli_query($conn, $consultaCountConvidadosConvite); 
+
+        while($dadoCount = $conCountConvidadosConvite->fetch_array()){ 
+            $count = $dadoCount['count'];
+            if($count == 0){
+                header("Location: confPresInserConvite.php?t=CI"); //CI - Convite Inválido 
+            }
+        }
+    }
+    
+    if (empty($_GET['t'])){ 
+    }elseif($_GET['t'] == 'DS'){ //DS - DADOS SALVOS
+        echo "<script>confirm('Dados salvos com sucesso.');</script>";
+    }elseif($_GET['t'] == 'NV'){ //NV - NOME VAZIO
+        echo "<script>confirm('Você não colocou o seu nome.');</script>";
+    }elseif($_GET['t'] == 'MV'){ //MV - MENSAGEM VAZIA
+        echo "<script>confirm('Você não digitou uma mensagem.');</script>";
+    }elseif($_GET['t'] == 'FV'){ //FV - FOTO VAZIA
+        echo "<script>confirm('Você não escolheu uma foto.');</script>";
+    }
 
     if($tela == 'insertPresenca'){
         echo "<script>alert('Você não inseriu o CPF');</script>";
     }
 
-    if (trim($codConvite) <= 0){
-        header("Location: confPresInserConvite.php?t=r");
-        return;
-    }
-
-    $consulta = "SELECT codConvidado, fk_codConvite, faixaEtaria, nomConvidado, cpfConvidado, presenca FROM convidado WHERE fk_codConvite = '$codConvite' ORDER BY faixaEtaria";
+    $consulta = "SELECT codConvidado, 
+                        fk_codConvite, 
+                        faixaEtaria, 
+                        nomConvidado, 
+                        cpfConvidado, 
+                        presenca 
+                   FROM convidado 
+                  WHERE fk_codConvite = '$codConvite' 
+               ORDER BY faixaEtaria";
     $con = mysqli_query($conn, $consulta);
  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <?php include "../head.php"; ?>
-    </head>
     <body>
-        <?php 
-            if (empty($_GET['usu'])){
-                include "../menus/menuConvidado.php";
-            }elseif ($_GET['usu'] == 'N'){
-                include "../menus/menuNoivos.php";
-            }
-        ?>
 </br></br></br></br>
         <div class="resultPesquisa"  style="text-align: center;">
             <h2 class="titulo">Confirme sua Presença!</h2>

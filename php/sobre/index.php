@@ -1,6 +1,5 @@
 <?php 
     include_once ("../banco_dados/selects.php");
-    include_once ("../head.php");
 
     //DS - DADOS SALVOS
     //NV - NOME VAZIO

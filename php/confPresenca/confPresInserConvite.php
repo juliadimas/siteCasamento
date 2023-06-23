@@ -4,6 +4,10 @@
     if (empty($_GET['t'])){
     }elseif($_GET['t'] == 'DS'){
         echo "<script>confirm('Dados salvos com sucesso.');</script>";
+    }elseif($_GET['t'] == 'SC'){
+        echo "<script>confirm('Você não inseriu um código de convite.');</script>";
+    }elseif($_GET['t'] == 'CI'){
+        echo "<script>confirm('Você inseriu um convite inválido.');</script>";
     }
  ?>
 <!DOCTYPE html>
@@ -17,7 +21,7 @@
                 Sua presença é muito importante para nós, mas caso você não possa ir, ficaremos tristes, porém vamos entender.
             </p>
                 </br></br>
-            <form method="GET" action="resultConfPresencaCasamento.php">
+            <form method="POST" action="resultConfPresencaCasamento.php">
                 <p class="texto">
                     Código do Convite:
                     <input type="text" id="codConvite" name="codConvite" size="20" placeholder="Código do seu convite" class="texto" style="text-align: left;"/> 

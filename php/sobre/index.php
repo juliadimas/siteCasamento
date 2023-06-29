@@ -1,5 +1,6 @@
 <?php 
     include_once ("../banco_dados/selects.php");
+    //include_once ("../banco_dados/verificaUsuario.php");
 
     //DS - DADOS SALVOS
     //NV - NOME VAZIO

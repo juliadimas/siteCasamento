@@ -2,7 +2,11 @@
 
     include_once("selects.php");
 
-    $usu = $usuario;
+    if (empty($usuario)){
+        $usu = 'C';
+    }else{
+        $usu = $usuario;
+    }
 
     if(empty($_POST['login'])){
         $login = 'loginVazio';
@@ -36,8 +40,6 @@
     }elseif ($usuario == 'C'){
         include "../menus/menuConvidado.php";
     }
-
-    echo $usuario;
 
     if ($usu <> $usuario){
         header("Location: ../sobre/index.php");

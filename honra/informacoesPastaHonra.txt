@@ -1,0 +1,4 @@
+- Pasta destinada aos convidados de honra - que vão fazer alguma entrada
+
+SUBPASTAS: 
+- PHP - arquivos PHP
